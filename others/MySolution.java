@@ -20,7 +20,11 @@ Presenter与View（这里是Activity/Fragment）的通信，是通过Activity/Fr
     对于显式Intent而言，Android系统无须对该Intent做任何解析，系统直接找到指定的目标组件，启动或触发它即可。
     对于隐式Intent而言，Android系统需要对该Intent进行解析，解析出它的条件，然后再去系统中查找与之匹配的目标条件。如果找到符合条件的组件，就启动或触发它们。
     那么Android系统如何判断被调用组件是否符合隐式Intent呢？这就需要靠IntentFilter来实现了，被调用组件可通过IntentFilter来声明自己所满足的条件——也就是声明自己到底能处理哪些隐式Intent。
+4 Service vs IntentService
+ IntentService 里面有个HandlerThead,所有任务都是通过这个工作线程处理的用户可以实现onHandleIntent添加任务,处理完成后会stopSelf(id) (启动service的次数和最后和这个id相等时才会停止服务,也就是多次启动这个service处理完成任务后才关闭;这个多次启动指的是先前的任务没有处理完)
+ 可以参考:https://stackoverflow.com/questions/15524280/service-vs-intentservice/15772151#15772151   回答问题显得有条理性.   
 
 
-  
+  5How to persist data in an Android app?
+  文件 ,数据库,sharepreference,网络,contentprovider(对外统一接口,实际上保存可能是文件,数据库等)
  
