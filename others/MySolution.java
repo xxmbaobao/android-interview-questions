@@ -25,6 +25,15 @@ Presenter与View（这里是Activity/Fragment）的通信，是通过Activity/Fr
  可以参考:https://stackoverflow.com/questions/15524280/service-vs-intentservice/15772151#15772151   回答问题显得有条理性.   
 
 
-  5How to persist data in an Android app?
+5How to persist data in an Android app?
   文件 ,数据库,sharepreference,网络,contentprovider(对外统一接口,实际上保存可能是文件,数据库等)
+6How would you perform a long-running operation in an application? 耗时操作
+AsyncTask Handler
+Handler:主要接受子线程发送的数据，并用此数据配合主线程更新UI;Handler可以分发Message对象和Runnable对象到主线程中, 
+每个Handler实例,都会绑定到创建他的线程中(在哪个线程创建就会绑定到相应线程)
+7How would you communicate between two Fragments?  两个fragment 通信
+ >如果两个Fragment同一个宿主Activity则可以通过 getActivity获取宿主Activity 然后通过Activity获取FragmentManager 再findFragmentById拿到另一个fragment
+实例,最后就可以调用它的方法了.
+ >如果无法拿到实例,如Fragment用ViewPager组成的可以通过接口,Activity与Fragment通信也是如此.
+ >使用广播,Activity与Fragment通信也是如此. > 直接调用Activity 的public方法
  
