@@ -36,4 +36,8 @@ Handler:主要接受子线程发送的数据，并用此数据配合主线程更
 实例,最后就可以调用它的方法了.
  >如果无法拿到实例,如Fragment用ViewPager组成的可以通过接口,Activity与Fragment通信也是如此.
  >使用广播,Activity与Fragment通信也是如此. > 直接调用Activity 的public方法
+8 不同app之前进行交互
+ 隐式,显示启动
+ http://www.jianshu.com/p/27d0ec1c52b2
+9
  
