@@ -1,0 +1,6 @@
+.Activity的 主要Flags
+.Flag_ACTIVITY_NEW_TASK   singleTask模式 FLAG——ACTIVITY——SINGLE——TOP singleTop模式  FLAG——ACTIVITY——CLEAR——TOP （singleTask模式具有此标记位的效果）
+FLAGS_ACTIVYT_EXECLUDE_FROM_RECENTS   android:execludeFromRecents= "true"
+.显示调用 需要明确的指定被启动对象的组建信息，包括包名和类型。隐式启动需要Intent能够匹配目标组件的IntentFilter中所设置的过滤信息。
+.Action 区分大小写
+如何确保隐式启动的Activity一定能成功呢  通过PackageManager 的queryIntentActivities 或者resolveActivity 来判断是否有匹配的Activity
